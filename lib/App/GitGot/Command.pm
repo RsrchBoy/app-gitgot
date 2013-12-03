@@ -6,6 +6,9 @@ use MooX::Cmd;
 use MooX::Types::MooseLike::Base ':all';
 use 5.010;
 
+use constant Repos
+    => ArrayRef[InstanceOf['App::GitGot::Repo::Git']];
+
 use App::GitGot::Repo::Git;
 use File::Path 2.08         qw/ make_path /;
 use List::Util              qw/ max /;
@@ -93,9 +96,10 @@ has 'verbose' => (
 # non-option attrs
 has 'active_repo_list' => (
   is         => 'rw',
-  isa        => ArrayRef[App::GitGot::Repo::Git] ,
+  isa        => Repos,
+  lazy       => 1,
+  builder    => 1,
   traits     => [qw/ NoGetopt Array /],
-  lazy_build => 1 ,
   handles    => {
     active_repos => 'elements' ,
   } ,
@@ -109,7 +113,7 @@ has 'args' => (
 
 has 'full_repo_list' => (
   is         => 'rw',
-  isa        => ArrayRef[App::GitGot::Repo::Git] ,
+  isa        => Repos,
   traits     => [qw/ NoGetopt Array /],
   lazy_build => 1 ,
   handles    => {
@@ -119,10 +123,9 @@ has 'full_repo_list' => (
 );
 
 has 'outputter' => (
-  is         => 'ro' ,
-  isa        => 'App::GitGot::Outputter' ,
+  is         => 'lazy' ,
+  isa        => InstanceOf['App::GitGot::Outputter'],
   traits     => [ qw/ NoGetopt / ] ,
-  lazy_build => 1 ,
   handles    => [
     'error' ,
     'warning' ,

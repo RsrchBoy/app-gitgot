@@ -14,9 +14,8 @@ use namespace::clean -except => 'meta';
 has '+type' => ( default => 'git' );
 
 has '_wrapper' => (
-  is         => 'ro' ,
+  is         => 'lazy' ,
   isa        => InstanceOf['Git::Wrapper'] ,
-  lazy_build => 1 ,
   handles    => [ qw/
                       cherry
                       clone
