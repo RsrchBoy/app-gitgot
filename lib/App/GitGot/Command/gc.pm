@@ -1,7 +1,7 @@
 package App::GitGot::Command::gc;
 # ABSTRACT: Run the 'gc' command to garbage collect in git repos
 
-use Mouse;
+use Moo;
 extends 'App::GitGot::Command';
 use 5.010;
 

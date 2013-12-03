@@ -1,8 +1,9 @@
 package App::GitGot::Command;
 # ABSTRACT: Base class for App::GitGot commands
 
-use Mouse;
-extends 'MouseX::App::Cmd::Command';
+use Moo;
+use MooX::Cmd;
+use MooX::Types::MooseLike::Base ':all';
 use 5.010;
 
 use App::GitGot::Repo::Git;
@@ -11,7 +12,7 @@ use List::Util              qw/ max /;
 use Path::Class;
 use Try::Tiny;
 use YAML                    qw/ DumpFile LoadFile /;
-use namespace::autoclean;
+use namespace::clean -except => 'meta';
 
 # option attrs
 has 'all' => (

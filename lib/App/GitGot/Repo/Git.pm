@@ -1,14 +1,14 @@
 package App::GitGot::Repo::Git;
 
 # ABSTRACT: Git repo objects
-use Mouse;
+use Moo;
 extends 'App::GitGot::Repo';
 use 5.010;
 
-use namespace::autoclean;
 use Git::Wrapper;
 use Test::MockObject;
 use Try::Tiny;
+use namespace::clean -except => 'meta';
 
 has '+type' => ( default => 'git' );
 

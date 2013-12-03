@@ -1,7 +1,7 @@
 package App::GitGot::Command::this;
 # ABSTRACT: check if the current repository is managed
 
-use Mouse;
+use Moo;
 extends 'App::GitGot::Command';
 use 5.010;
 

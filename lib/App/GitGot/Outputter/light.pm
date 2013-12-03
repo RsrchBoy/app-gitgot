@@ -1,7 +1,7 @@
 package App::GitGot::Outputter::light;
 # ABSTRACT: Color scheme appropriate for dark terminal backgrounds
 
-use Mouse;
+use Moo;
 extends 'App::GitGot::Outputter';
 use 5.010;
 

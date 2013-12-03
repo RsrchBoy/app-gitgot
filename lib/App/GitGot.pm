@@ -1,7 +1,8 @@
 package App::GitGot;
 
-use Mouse;
-extends 'MouseX::App::Cmd';
+use Moo;
+use MooX::Cmd;
+
 # ABSTRACT: A tool to make it easier to manage multiple git repositories.
 
 =head1 SYNOPSIS

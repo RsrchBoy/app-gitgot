@@ -1,7 +1,7 @@
 package App::GitGot::Command::mux;
 # ABSTRACT: open a tmux window for a selected project
 
-use Mouse;
+use Moo;
 extends 'App::GitGot::Command';
 use 5.010;
 

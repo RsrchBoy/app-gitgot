@@ -1,7 +1,7 @@
 package App::GitGot::Command::remove;
 # ABSTRACT: remove a managed repository from your config
 
-use Mouse;
+use Moo;
 extends 'App::GitGot::Command';
 use 5.010;
 

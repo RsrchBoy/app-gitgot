@@ -1,47 +1,48 @@
 package App::GitGot::Repo;
 
 # ABSTRACT: Base repository objects
-use Mouse;
+use Moo;
+use MooX::Types::MooseLike::Base ':all';
 use 5.010;
 
-use namespace::autoclean;
+use namespace::clean -except => 'meta';
 
 has 'label' => (
   is       => 'ro' ,
-  isa      => 'Str' ,
+  isa      => Str ,
 );
 
 has 'name' => (
   is          => 'ro',
-  isa         => 'Str',
+  isa         => Str,
   required    => 1 ,
 );
 
 has 'number' => (
   is          => 'ro',
-  isa         => 'Int',
+  isa         => Int,
   required    => 1 ,
 );
 
 has 'path' => (
   is          => 'ro',
-  isa         => 'Str',
+  isa         => Str,
   required    => 1 ,
 );
 
 has 'repo' => (
   is          => 'ro',
-  isa         => 'Str',
+  isa         => Str,
 );
 
 has 'tags' => (
   is          => 'ro',
-  isa         => 'Str',
+  isa         => Str,
 );
 
 has 'type' => (
   is          => 'ro',
-  isa         => 'Str',
+  isa         => Str,
   required    => 1 ,
 );
 

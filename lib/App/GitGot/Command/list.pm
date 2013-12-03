@@ -1,7 +1,7 @@
 package App::GitGot::Command::list;
 # ABSTRACT: list managed repositories
 
-use Mouse;
+use Moo;
 extends 'App::GitGot::Command';
 use 5.010;
 
