@@ -17,7 +17,7 @@ use namespace::clean -except => 'meta';
 # option attrs
 has 'all' => (
   is            => 'rw',
-  isa           => 'Bool',
+  isa           => Bool,
   documentation => 'use all available repositories' ,
   cmd_aliases   => 'a',
   traits        => [qw/ Getopt /],
@@ -25,14 +25,14 @@ has 'all' => (
 
 has 'by_path' => (
   is          => 'rw' ,
-  isa         => 'Bool' ,
+  isa         => Bool ,
   cmd_aliases => 'p',
   traits      => [qw/ Getopt /],
 );
 
 has 'color_scheme' => (
   is            => 'rw',
-  isa           => 'Str',
+  isa           => Str,
   documentation => 'name of color scheme to use',
   default       => 'dark',
   cmd_aliases   => 'c' ,
@@ -41,7 +41,7 @@ has 'color_scheme' => (
 
 has 'configfile' => (
   is            => 'rw',
-  isa           => 'Str',
+  isa           => Str,
   documentation => 'path to config file',
   default       => "$ENV{HOME}/.gitgot",
   cmd_aliases   => 'f' ,
@@ -51,7 +51,7 @@ has 'configfile' => (
 
 has 'no_color' => (
   is            => 'rw',
-  isa           => 'Bool',
+  isa           => Bool,
   documentation => 'do not use colored output',
   default       => 0,
   cmd_aliases   => 'C',
@@ -60,7 +60,7 @@ has 'no_color' => (
 
 has 'quiet' => (
   is            => 'rw',
-  isa           => 'Bool',
+  isa           => Bool,
   documentation => 'keep it down',
   cmd_aliases   => 'q',
   traits        => [qw/ Getopt /],
@@ -68,7 +68,7 @@ has 'quiet' => (
 
 has 'tags' => (
   is            => 'rw',
-  isa           => 'ArrayRef[Str]',
+  isa           => ArrayRef[Str],
   documentation => 'select repositories tagged with these words' ,
   cmd_aliases   => 't',
   traits        => [qw/ Getopt /],
@@ -76,7 +76,7 @@ has 'tags' => (
 
 has 'skip_tags' => (
   is            => 'rw',
-  isa           => 'ArrayRef[Str]',
+  isa           => ArrayRef[Str],
   documentation => 'select repositories not tagged with these words' ,
   cmd_aliases   => 'T',
   traits        => [qw/ Getopt /],
@@ -84,7 +84,7 @@ has 'skip_tags' => (
 
 has 'verbose' => (
   is            => 'rw',
-  isa           => 'Bool',
+  isa           => Bool,
   documentation => 'bring th\' noise',
   cmd_aliases   => 'v',
   traits        => [qw/ Getopt /],
@@ -93,7 +93,7 @@ has 'verbose' => (
 # non-option attrs
 has 'active_repo_list' => (
   is         => 'rw',
-  isa        => 'ArrayRef[App::GitGot::Repo::Git]' ,
+  isa        => ArrayRef[App::GitGot::Repo::Git] ,
   traits     => [qw/ NoGetopt Array /],
   lazy_build => 1 ,
   handles    => {
@@ -103,13 +103,13 @@ has 'active_repo_list' => (
 
 has 'args' => (
   is     => 'rw' ,
-  isa    => 'ArrayRef' ,
+  isa    => ArrayRef ,
   traits => [ qw/ NoGetopt / ] ,
 );
 
 has 'full_repo_list' => (
   is         => 'rw',
-  isa        => 'ArrayRef[App::GitGot::Repo::Git]' ,
+  isa        => ArrayRef[App::GitGot::Repo::Git] ,
   traits     => [qw/ NoGetopt Array /],
   lazy_build => 1 ,
   handles    => {

@@ -7,7 +7,7 @@ use 5.010;
 use Term::ANSIColor;
 
 # boolean indicating whether color messages should be output at all
-has 'no_color' => ( is => 'ro' , isa => 'Bool' , default => 0 );
+has 'no_color' => ( is => 'ro' , isa => Bool , default => 0 );
 
 =method error
 

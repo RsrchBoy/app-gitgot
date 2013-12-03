@@ -13,7 +13,7 @@ use Term::ReadLine;
 
 has 'defaults' => (
   is          => 'rw',
-  isa         => 'Bool',
+  isa         => Bool,
   cmd_aliases => 'D',
   traits      => [qw/ Getopt /],
 );

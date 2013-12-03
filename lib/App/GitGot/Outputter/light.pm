@@ -7,7 +7,7 @@ use 5.010;
 
 has 'color_error' => (
   is      => 'ro' ,
-  isa     => 'Str' ,
+  isa     => Str ,
   default => 'bold red'
 );
 
@@ -16,19 +16,19 @@ has 'color_error' => (
 
 has 'color_warning' => (
   is      => 'ro' ,
-  isa     => 'Str' ,
+  isa     => Str ,
   default => 'bold magenta'
 );
 
 has 'color_major_change' => (
   is      => 'ro' ,
-  isa     => 'Str' ,
+  isa     => Str ,
   default => 'blue'
 );
 
 has 'color_minor_change' => (
   is      => 'ro' ,
-  isa     => 'Str' ,
+  isa     => Str ,
   default => 'uncolored'
 );
 

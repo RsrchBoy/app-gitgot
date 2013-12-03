@@ -13,7 +13,7 @@ use Net::GitHub;
 
 has 'noclone' => (
   is          => 'rw',
-  isa         => 'Bool',
+  isa         => Bool,
   cmd_aliases => 'n',
   traits      => [qw/ Getopt /],
 );

@@ -2,6 +2,7 @@ package App::GitGot::Repo::Git;
 
 # ABSTRACT: Git repo objects
 use Moo;
+use MooX::Types::MooseLike::Base ':all';
 extends 'App::GitGot::Repo';
 use 5.010;
 
@@ -14,7 +15,7 @@ has '+type' => ( default => 'git' );
 
 has '_wrapper' => (
   is         => 'ro' ,
-  isa        => 'Git::Wrapper' ,
+  isa        => InstanceOf['Git::Wrapper'] ,
   lazy_build => 1 ,
   handles    => [ qw/
                       cherry

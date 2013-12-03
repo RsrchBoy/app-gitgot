@@ -2,6 +2,7 @@ package App::GitGot::Command::add;
 # ABSTRACT: add a new repo to your config
 
 use Moo;
+use MooX::Types::MooseLike::Base ':all';
 extends 'App::GitGot::Command';
 use 5.010;
 
@@ -13,14 +14,14 @@ use Term::ReadLine;
 
 has 'defaults' => (
   is          => 'rw',
-  isa         => 'Bool',
+  isa         => Bool,
   cmd_aliases => 'D',
   traits      => [qw/ Getopt /],
 );
 
 has 'origin' => (
   is          => 'rw',
-  isa         => 'Str',
+  isa         => Str,
   cmd_aliases => 'o',
   default     => 'origin',
   traits      => [qw/ Getopt /],

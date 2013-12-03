@@ -9,7 +9,7 @@ use List::MoreUtils qw/ any /;
 
 has 'force' => (
   is          => 'rw',
-  isa         => 'Bool',
+  isa         => Bool,
   traits      => [qw/ Getopt /],
 );
 
