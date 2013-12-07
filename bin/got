@@ -206,4 +206,4 @@ use 5.010;
 use FindBin;
 use lib "$FindBin::RealBin/../lib";
 use App::GitGot;
-App::GitGot->run;
+App::GitGot->new_with_cmd->execute;

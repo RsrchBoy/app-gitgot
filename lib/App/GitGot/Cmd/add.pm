@@ -1,4 +1,4 @@
-package App::GitGot::Command::add;
+package App::GitGot::Cmd::add;
 # ABSTRACT: add a new repo to your config
 
 use Moo;

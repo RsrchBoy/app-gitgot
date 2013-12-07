@@ -2,7 +2,7 @@ package App::GitGot::Command;
 # ABSTRACT: Base class for App::GitGot commands
 
 use Moo;
-use MooX::Cmd;
+#use MooX::Cmd;
 use MooX::Types::MooseLike::Base ':all';
 use 5.010;
 
