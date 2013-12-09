@@ -1,7 +1,7 @@
 package App::GitGot::Command::move;
 # ABSTRACT: move a repo in a new directory
 
-use Mouse;
+use Moose;
 extends 'App::GitGot::Command';
 use 5.010;
 

@@ -1,7 +1,7 @@
 package App::GitGot::Command::chdir;
 # ABSTRACT: open a subshell in a selected project
 
-use Mouse;
+use Moose;
 extends 'App::GitGot::Command';
 use 5.010;
 

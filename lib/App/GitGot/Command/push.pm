@@ -1,7 +1,7 @@
 package App::GitGot::Command::push;
 # ABSTRACT: Push local changes to the default remote in git repos
 
-use Mouse;
+use Moose;
 extends 'App::GitGot::Command';
 use 5.010;
 

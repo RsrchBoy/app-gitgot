@@ -1,7 +1,7 @@
 package App::GitGot::Command::update_status;
 # ABSTRACT: update managed repositories then display their status
 
-use Mouse;
+use Moose;
 extends 'App::GitGot::Command';
 use 5.010;
 

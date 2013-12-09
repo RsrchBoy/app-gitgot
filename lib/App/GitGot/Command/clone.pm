@@ -1,7 +1,7 @@
 package App::GitGot::Command::clone;
 # ABSTRACT: clone a remote repo and add it to your config
 
-use Mouse;
+use Moose;
 extends 'App::GitGot::Command';
 use 5.010;
 
